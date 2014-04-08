@@ -25,14 +25,20 @@ class Cmake < Formula
   url 'http://www.cmake.org/files/v2.8/cmake-2.8.12.2.tar.gz'
   sha1 'cca70b307aa32a6a32c72e01fdfcecc84c1c2690'
 
-  head 'http://cmake.org/cmake.git'
+  head 'https://github.com/Kitware/CMake.git', :branch => 'master'
 
-  bottle do
-    cellar :any
-    revision 2
-    sha1 "e1e50cfd9f421b64365a7a2c34e9e6337f9391b7" => :mavericks
-    sha1 "9c60ed323f8752eb257d1505e33d70e4367e4219" => :mountain_lion
-    sha1 "1914f68373cdc8d1c99b4d76e1e1fed85e4303d3" => :lion
+  stable do
+    patch do
+      url "https://github.com/NikolausDemmel/CMake/pull/2.patch"
+      sha1 "1e7ae84d7c6bb2e884d8a1e8ffe69c61146ee503"
+    end
+  end
+
+  head do
+    patch do
+      url "https://github.com/NikolausDemmel/CMake/pull/1.patch"
+      sha1 "1f859658668739984e01fc9e83516324b4138022"
+    end
   end
 
   depends_on NoExpatFramework
