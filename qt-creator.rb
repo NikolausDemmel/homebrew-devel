@@ -13,6 +13,6 @@ class QtCreator < Formula
     system "#{Formula["qt5"].opt_prefix}/bin/qmake", "-r"
     system "make"
 
-    Pathname.glob("#{bin}/*.app") { |app| mv app, prefix }
+    Pathname.glob("bin/*.app") { |app| mv app, prefix }
   end
 end
