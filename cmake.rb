@@ -30,7 +30,7 @@ class Cmake < Formula
   stable do
     patch do
       url "https://github.com/NikolausDemmel/CMake/pull/2.patch"
-      sha1 "1e7ae84d7c6bb2e884d8a1e8ffe69c61146ee503"
+      sha1 "0e21491d5846ddb9b177403eae495bb2105b046e"
     end
   end
 
