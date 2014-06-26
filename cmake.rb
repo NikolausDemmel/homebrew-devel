@@ -22,22 +22,23 @@ end
 
 class Cmake < Formula
   homepage 'http://www.cmake.org/'
-  url 'http://www.cmake.org/files/v2.8/cmake-2.8.12.2.tar.gz'
-  sha1 'cca70b307aa32a6a32c72e01fdfcecc84c1c2690'
+  url 'http://www.cmake.org/files/v3.0/cmake-3.0.0.tar.gz'
+  sha1 '4dfd9ee9b829c77175d655f22322f14747f11ad2'
 
-  head 'https://github.com/Kitware/CMake.git', :branch => 'master'
+#  head 'https://github.com/Kitware/CMake.git', :branch => 'master'
+  head 'http://cmake.org/cmake.git'
 
   stable do
     patch do
-      url "https://github.com/NikolausDemmel/CMake/pull/2.patch"
-      sha1 "0e21491d5846ddb9b177403eae495bb2105b046e"
+      url "https://github.com/NikolausDemmel/CMake/pull/3.patch"
+      sha1 "321685d1775f9b82daa50778a12981b2765075a6"
     end
   end
 
   head do
     patch do
-      url "https://github.com/NikolausDemmel/CMake/pull/1.patch"
-      sha1 "1f859658668739984e01fc9e83516324b4138022"
+      url "https://github.com/NikolausDemmel/CMake/pull/4.patch"
+      sha1 "7e2ac2ed44adc677c795a85b6b1b1e73526d655a"
     end
   end
 
