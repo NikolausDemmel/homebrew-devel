@@ -21,24 +21,24 @@ class NoExpatFramework < Requirement
 end
 
 class Cmake < Formula
-  homepage 'http://www.cmake.org/'
-  url 'http://www.cmake.org/files/v3.0/cmake-3.0.0.tar.gz'
-  sha1 '4dfd9ee9b829c77175d655f22322f14747f11ad2'
+  homepage "http://www.cmake.org/"
+  url "http://www.cmake.org/files/v3.1/cmake-3.1.3.tar.gz"
+  sha1 "5b9bb6e6f8c93335a0ef7b6c2d00a5273c2ea6cc"
 
-#  head 'https://github.com/Kitware/CMake.git', :branch => 'master'
-  head 'http://cmake.org/cmake.git'
+#  head "https://github.com/Kitware/CMake.git", :branch => "master"
+  head "http://cmake.org/cmake.git"
 
   stable do
     patch do
-      url "https://github.com/NikolausDemmel/CMake/pull/3.patch"
-      sha1 "77d49adadeafed7cfe8447188cc39b8abd125d94"
+      url "https://github.com/NikolausDemmel/CMake/pull/5.diff"
+      sha1 "72953c9a96b4c8c962073145a35dd2bedd5911ab"
     end
   end
 
   head do
     patch do
       url "https://github.com/NikolausDemmel/CMake/pull/4.patch"
-      sha1 "e5fa2c951180657baf3b1e97f19e273591e5f8c3"
+      sha1 "bcbdc5077202e924c38d32eb8abab10177ee00f7"
     end
   end
 
